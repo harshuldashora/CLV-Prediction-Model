@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CLV Predictor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        h2 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 30px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        input[type="text"], select {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0 20px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        
+        input[type="submit"] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 20px 0 0 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        
+        label {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+    <h2>Predict Customer Lifetime Value</h2>
+    <form action="/predict" method="post">
+        <label for="Age">Age:</label>
+        <input type="text" id="Age" name="Age"><br>
+        
+        <label for="Purchase_Amount">Purchase Amount:</label>
+        <input type="text" id="Purchase_Amount" name="Purchase_Amount"><br>
+        
+        <label for="Loyalty_Score">Loyalty Score:</label>
+        <input type="text" id="Loyalty_Score" name="Loyalty_Score"><br>
+        
+        <label for="Discount_Applied">Discount Applied:</label>
+        <select id="Discount_Applied" name="Discount_Applied">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select><br>
+        
+        <label for="Payment_Method">Payment Method:</label>
+        <select id="Payment_Method" name="Payment_Method">
+            <option value="Credit Card">Credit Card</option>
+            <option value="Debit Card">Debit Card</option>
+            <option value="Net Banking">Net Banking</option>
+            <option value="UPI">UPI</option>
+        </select><br>
+        
+        <label for="Customer_Segment">Customer Segment:</label>
+        <select id="Customer_Segment" name="Customer_Segment">
+            <option value="New">New</option>
+            <option value="Regular">Regular</option>
+            <option value="VIP">VIP</option>
+        </select><br>
+        
+        <label for="Preferred_Shopping_Channel">Preferred Shopping Channel:</label>
+        <select id="Preferred_Shopping_Channel" name="Preferred_Shopping_Channel">
+            <option value="Online">Online</option>
+            <option value="Offline">Offline</option>
+        </select><br>
+        
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
